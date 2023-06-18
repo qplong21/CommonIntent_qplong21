@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/email_body_edit_text"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:hint="Enter body"
+        app:layout_constraintStart_toEndOf="@+id/body_label"
+        app:layout_constraintTop_toBottomOf="@+id/email_subject_edit_text" />
+
+    <EditText
+        android:id="@+id/email_address_edit_text"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="Enter email"
+        app:layout_constraintStart_toEndOf="@+id/email_label"
+        app:layout_constraintTop_toBottomOf="@+id/call_button" />
+
+    <TextView
+        android:id="@+id/email_label"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Email:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_phone_number_button" />
+
+    <EditText
+        android:id="@+id/email_subject_edit_text"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="Enter subject"
+        app:layout_constraintStart_toEndOf="@+id/subject_label"
+        app:layout_constraintTop_toBottomOf="@+id/email_address_edit_text" />
+
+    <TextView
+        android:id="@+id/subject_label"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Subject:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_label" />
+
+    <TextView
+        android:id="@+id/body_label"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:gravity="center_horizontal|top"
+        android:paddingTop="10dp"
+        android:text="Body:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subject_label" />
+
+    <TextView
+        android:id="@+id/name_text_view"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/phone_number_text_view"
+        android:layout_width="312dp"
+        android:layout_height="50dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/name_text_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/select_phone_number_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_text_view" />
+
+    <Button
+        android:id="@+id/call_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/select_phone_number_button"
+        app:layout_constraintTop_toBottomOf="@+id/phone_number_text_view" />
+
+    <Button
+        android:id="@+id/send_email_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_body_edit_text" />
+
+    <Button
+        android:id="@+id/select_picture_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Picture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/body_label" />
+
+    <GridLayout
+        android:id="@+id/picture_grid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:columnCount="1"
+        android:rowCount="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Define the grid items here -->
+
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
